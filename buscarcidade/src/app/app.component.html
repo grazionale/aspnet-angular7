@@ -1,20 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Seja Bem Vindo ao: "{{ title }}!" {{cep}}
-  </h1>
-</div>
-<h2>Informe seu CEP abaixo: </h2>
+<div class="container gg-center">
+  <div class="row gg-border">
+    <div class="col-lg-6 col-xs-12 gg-padding">
+      <h1>{{ title }}</h1>
+      <h2>Informe seu CEP abaixo: </h2>
 
-<form action="" method="post">
-  <div class="form-group">
-      <input type="text" class="form-control" [(ngModel)]="cep" name="cep" id="cep" placeholder="Cep">
+      <form action="" method="post">      
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="" [(ngModel)]="cep" name="cep" id="cep" placeholder="Cep" >
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" type="button" id="buscar" (click)="buscarCep()">Buscar</button>
+          </div>
+        </div>
+      </form>
+
+      <ul class="list-group">
+        <li class="list-group-item">LOGRADOURO: {{dados.logradouro}}</li>
+      </ul>
+
+    </div>
   </div>
-  <button type="button" name="buscar" class="btn btn-primary" id="buscar" (click) = "buscarCep()" >Buscar</button>
-
-</form>
-<input type="hidden" id="id_divida" value="">
-
-<ul>
-    <li>LOGRADOURO: {{dados.logradouro}}</li>
-</ul>
+</div>

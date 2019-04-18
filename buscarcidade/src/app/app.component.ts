@@ -7,17 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Buscador de Cep';
+  title = 'Consulta de logradouro';
 
   cep = null;
   dados = [];
-
   constructor(private consultarCep: ConsultarCepService){}
 
   buscarCep() {
     this.consultarCep.consultarCep(this.cep).then(resultado => {
       this.dados = resultado;
-      //console.log(this.dados);
     });
   }
 }

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.gg-border{
+    border: 25px solid #007bff;
+}
+
+.gg-padding{
+    padding: 15px;
+}
+
+.gg-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+}
